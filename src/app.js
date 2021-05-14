@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {json} from 'express';
 import morgan from 'morgan';
 // Importamos las rutas de nuestro proyecto
 import MetodoRuta from './routes/metodo';
@@ -7,6 +7,7 @@ import MetodoRuta from './routes/metodo';
 const app = express();
 
 app.use(morgan('dev'));
+app.use(json());
 
 // seccion de rutas
 app.use('/api/metodo',MetodoRuta);

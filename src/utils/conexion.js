@@ -1,6 +1,6 @@
-import sequelize from 'sequelize';
+import Sequelize from 'sequelize';
 
-const sequelize = new Sequelize('postgres://postgres:root@localhost:5432/metodos')
+const conexion = new Sequelize('postgres://postgres:root@localhost:5432/metodos')
 
 
-export default sequelize;
+export default conexion;
