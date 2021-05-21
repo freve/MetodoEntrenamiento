@@ -1,5 +1,7 @@
 import Sequelize from 'sequelize';
 import conexion from '../utils/conexion';
+import Archivo from './archivoModelo';
+import SesionMetodo from './sesionMetodoModelo';
 
 const Metodo = conexion.define('metodo',{
     id: {
@@ -33,5 +35,20 @@ const Metodo = conexion.define('metodo',{
 },{
     timestamps: false
 });
+
+/**
+ * Creación de relación 1 a muchos desde metodo a archivo
+ * referecia foranea campo metodo en la tabla archvo
+ */
+Metodo.hasMany(Archivo,{foreignKey: 'metodoid', sourceKey: 'id'});
+Archivo.belongsTo(Metodo,{foreignKey: 'metodoid', sourceKey: 'id'});
+
+/**
+ * Creación de relación 1 a muchos desde metodo a sesion_metodo
+ * referecia foranea campo metodo en la tabla sesion_metodo
+ */
+
+Metodo.hasMany(SesionMetodo,{foreignKey: 'metodoid', sourceKey: 'id'});
+SesionMetodo.belongsTo(SesionMetodo,{foreignKey:'metodoid', sourceKey:'id'});
 
 export default Metodo;
