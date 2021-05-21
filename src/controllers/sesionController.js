@@ -22,8 +22,8 @@ export async function obtenerSesiones(req, res){
 }
 
 export async function obtenerSesion(req, res){
+    const {id} = req.params;
     try {
-        const {id} = req.params;
         const sesion = await Sesion.findOne({
             where: id
         }
@@ -33,13 +33,16 @@ export async function obtenerSesion(req, res){
             return res.json({
                 sesion: sesion
             });
-        }else{
+        }else{ // TODO:reemplazar este else en todos los servicios por que si no encuentra el elemento salta al catch
             return res.json({
                 message: error
             });
         }
     } catch (error) {
-        res.status(500).json({})
+        let errorM = `lo sentimos no existe una sesion con el id: ${id}`;
+        res.status(500).json({
+           error: error
+        });
     }
 }
 
