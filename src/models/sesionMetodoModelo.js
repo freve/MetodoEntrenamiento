@@ -21,7 +21,8 @@ const SesionMetodo = conexion.define('sesionMetodo',{
     }
 },{
     timestamps: false,
-    tableName: 'sesion_metodo'
+    tableName: 'sesion_metodo',
+    modelName: 'SesionMetodo'
 })
 
 
