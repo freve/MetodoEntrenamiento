@@ -4,8 +4,8 @@ export async function obtenerMetodos(req, res){
    try{
         const listaMetodos = await Metodo.findAll();
         return res.json({
-            metodos: listaMetodos
-        })
+             listaMetodos
+        });
    }catch(error){
        res.status(500).json({
         message: "Lo sentimos ha ocurrido un error",
