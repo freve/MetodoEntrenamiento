@@ -1,5 +1,6 @@
 import express, {json} from 'express';
 import morgan from 'morgan';
+import cors from 'cors';
 // Importamos las rutas de nuestro proyecto
 import MetodoRuta from './routes/metodo';
 import sesionRuta from './routes/sesion';
@@ -8,8 +9,9 @@ import Asignacion from './routes/sesionMetodo';
 
 const app = express();
 
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.use(json());
+app.use(cors());
 
 // seccion de rutas
 app.use('/api/metodo',MetodoRuta);

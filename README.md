@@ -4,7 +4,7 @@ core en node js
 
 ## Primeros pasos
 
-Para poder tener ejecutar correctamente el proyecto debemos tener el motor de base de datos
+Para poder ejecutar correctamente el proyecto debemos tener el motor de base de datos
 PostgreSQL y allí crearemos una base de datos llamada metodos, luego utilizaremos el ddl que encuentra en el directorio sql 
 
 También debemos cambiar en nuestra carpeta utils el archivo de conexion en donde reemplazaremos nuestros datos 
