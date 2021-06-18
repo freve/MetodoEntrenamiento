@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS sesion(
     CONSTRAINT sesion_pk PRIMARY KEY(id)
 );
 
-CREATE TABLE IF NOT EXISTS metodo(
+CREATE TABLE IF NOT EXISTS metodos(
     id SERIAL NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     descripcion VARCHAR(120),
