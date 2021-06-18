@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS sesion_metodo(
     fecha_creacion TIMESTAMP NOT NULL,
     CONSTRAINT sesion_metodo_pk PRIMARY KEY(id),
     CONSTRAINT sesion_fk FOREIGN KEY(sesionid) REFERENCES sesion(id),
-    CONSTRAINT metodo_fk PRIMARY KEY(metodoid) REFERENCES metodo(id)
+    CONSTRAINT metodo_fk FOREIGN KEY(metodoid) REFERENCES metodo(id)
 );
 
 CREATE TABLE IF NOT EXISTS archivo(
