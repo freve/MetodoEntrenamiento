@@ -25,3 +25,7 @@ Seguido de eso procedemos a ejecutar nuestro entorno en modo de desarrollo
 ```bash
 npm run dev
 ```
+
+## Despues de montar el docker
+
+Para que el aplicativo funcione correctamente debemos conectarnos a nuestra base de datos que crea el docker para eso podemos utilizar DBeaver para realizar la conexión a nuestra base
