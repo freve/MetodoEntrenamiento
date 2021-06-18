@@ -6,7 +6,7 @@ services:
         restart: always
         build: .
         ports: 
-            -"5000-3000"
+            - "5000:3000"
         links: 
             - base
     base:
@@ -14,7 +14,7 @@ services:
         image: postgres
         restart: always
         ports: 
-            -"5444:5432"
+            - "5444:5432"
         environment: 
             POSTGRES_PASSWORD: root
             POSTGRES_DB: metodos

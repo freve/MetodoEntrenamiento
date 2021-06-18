@@ -12,6 +12,8 @@ COPY . .
 
 EXPOSE 3000
 
+RUN npm run limpiar
+
 RUN npm run build
 
 CMD ["npm", "start"]
